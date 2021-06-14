@@ -60,8 +60,10 @@ func topoSort(m map[string][]string) []string {
 	for key := range m {
 		keys = append(keys, key)
 	}
+	fmt.Println(keys)
 
 	sort.Strings(keys)
+	fmt.Println(keys)
 	visitAll(keys)
 	return order
 }

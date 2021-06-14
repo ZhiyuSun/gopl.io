@@ -15,6 +15,7 @@ func squares() func() int {
 	var x int
 	return func() int {
 		x++
+		fmt.Println(x)
 		return x * x
 	}
 }

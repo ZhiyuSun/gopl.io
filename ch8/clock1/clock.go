@@ -8,6 +8,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net"
@@ -33,6 +34,7 @@ func handleConn(c net.Conn) {
 	defer c.Close()
 	for {
 		_, err := io.WriteString(c, time.Now().Format("15:04:05\n"))
+		fmt.Println(err)
 		if err != nil {
 			return // e.g., client disconnected
 		}

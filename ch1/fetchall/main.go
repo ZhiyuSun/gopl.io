@@ -46,4 +46,8 @@ func fetch(url string, ch chan<- string) {
 	ch <- fmt.Sprintf("%.2fs  %7d  %s", secs, nbytes, url)
 }
 
-//!-
+// go run main.go https://www.baidu.com https://www.sina.com https://www.qq.com
+//0.40s    24000  https://www.sina.com
+//0.44s   102517  https://www.qq.com
+//0.44s      227  https://www.baidu.com
+//0.44s elapsed

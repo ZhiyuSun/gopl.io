@@ -7,6 +7,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net"
@@ -32,6 +33,7 @@ func main() {
 	//!+
 	for {
 		conn, err := listener.Accept()
+		fmt.Println(123)
 		if err != nil {
 			log.Print(err) // e.g., connection aborted
 			continue
